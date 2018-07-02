@@ -1,0 +1,32 @@
+<!--
+  Generated template for the AdditemPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>additem</ion-title>
+      <ion-buttons end>
+        <button icon-only (click)="close()">
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating color="primary">What to do?</ion-label>
+    <ion-input type="text" [(ngModel)]="title" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating color="primary">Details</ion-label>
+    <ion-input type="text" [(ngModel)]="description" ></ion-input>
+    </ion-item>
+  <br><br>
+    <button ion-button color="secondary" block (click)="saveItem()" >Save Todo</button>
+</ion-content>

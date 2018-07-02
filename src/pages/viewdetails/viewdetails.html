@@ -1,0 +1,37 @@
+<!--
+  Generated template for the ViewdetailsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>viewdetails</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding="true">
+  <ion-card>
+    <ion-card-header style="font-size: 150%; font-weight: 700">
+      {{todoItem.title}}
+    </ion-card-header>
+    <ion-card-content>
+      {{todoItem.description}}
+    </ion-card-content>
+  </ion-card>
+   <br><br> 
+  <ion-item>
+    <ion-label floating color="primary">What to do?</ion-label>
+    <ion-input type="text" [(ngModel)]="todoItem.title" ></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating color="primary">Details</ion-label>
+    <ion-input type="text" [(ngModel)]="todoItem.description" ></ion-input>
+  </ion-item>
+  <br><br>
+  <button ion-button block outline (click)="updateTodo(todoItem)">Update Todo</button>
+  <br><br>
+  <button ion-button block outline color="danger" (click)="delete(todoItem)">delete Todo</button>
+</ion-content>

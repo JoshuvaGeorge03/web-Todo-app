@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Todo List
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addItem()">
+        <ion-icon name="add-circle"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item *ngFor="let item of items | async" (dblclick)="delete(item,$event)" >
+      {{item.title}}
+      <ion-icon right float-right name="arrow-forward" (click)="viewItem(item)" style="cursor: pointer;"></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>
